@@ -41,6 +41,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) f
 - Special thanks to the WarMenu creators for their fantastic menu framework.
 - Gratitude to the FiveM community for their continued support and inspiration.
 
----
-
-Feel free to adjust the content to better suit your project's needs or to add any additional sections you think might be useful, like a 'Getting Started' guide with installation instructions, or a 'Contributions' section to encourage community development.
