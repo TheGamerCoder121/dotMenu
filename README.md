@@ -5,6 +5,10 @@
 
 DOT Menu is a comprehensive vehicle management system designed for FiveM servers. It provides players with unparalleled control over their vehicles, including the ability to toggle vehicle extras, modify vehicle components, and manage vehicle doors, including special functionalities like bomb bay doors. This innovative menu is built to enhance gameplay, offering a user-friendly interface and detailed customization options.
 
+## Preview
+https://github.com/TheGamerCoder121/dotMenu/assets/54008191/49cdc444-015a-467f-9d49-7e00a5f165e5
+
+
 ## Features
 
 - **Vehicle Extras Management**: Toggle the state of vehicle extras dynamically, with support for up to 20 extras.
