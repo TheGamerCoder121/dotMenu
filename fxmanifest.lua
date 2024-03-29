@@ -4,11 +4,11 @@ lua54 'yes'
 
 author 'Mr.Gamer (https://github.com/TheGamerCoder121)'
 description 'FiveM Menu for Redsaints DOT Pack'
-version '1.0.0'
+version '1.0.1'
 
 client_script {
+	'dotMenu.lua',
 	'warmenu.lua',
-	'dotMenu.lua'
 }
 
 server_script {

@@ -23,9 +23,11 @@
 --  \____|_|  \___|\__,_|\__\___|\__,_| |_.__/ \__, | \_|  |_|_(_) \____/\__,_|_| |_| |_|\___|_|
 --                                              __/ |
 --                                             |___/
-
 local wasInitialized = false
 local sharedState = {} -- Shared state including vehicle
+
+doors = {"Driver", "Passenger", "Rear Left", "Rear Right", "Hood", "Trunk", "Bomb Bay", "door_hatch_r"}  -- Example initialization
+
 
 local state = {}
 
@@ -83,27 +85,6 @@ local function uiThread()
                         CloseBombBayDoors(vehicle)
                     end
             end
-
-            -- WarMenu.Button('Button', 'Subtext')
-			-- if WarMenu.IsItemHovered() then
-			-- 	WarMenu.ToolTip('Tooltip example.')
-			-- end
-
-			-- local isPressed, inputText = WarMenu.InputButton('InputButton', nil, state.inputText)
-			-- if isPressed and inputText then
-			-- 	state.inputText = inputText
-			-- end
-
-			-- if WarMenu.SpriteButton('SpriteButton', 'commonmenu', state.useAltSprite and 'shop_gunclub_icon_b' or 'shop_garage_icon_b') then
-			-- 	state.useAltSprite = not state.useAltSprite
-			-- end
-
-			-- if WarMenu.CheckBox('CheckBox', state.isChecked) then
-			-- 	state.isChecked = not state.isChecked
-			-- end
-
-			-- local _, currentIndex = WarMenu.ComboBox('ComboBox', items, state.currentIndex)
-			-- state.currentIndex = currentIndex
 
             WarMenu.End()
         elseif WarMenu.Begin("dotMenuDoors") then
@@ -211,46 +192,7 @@ local function uiThread()
             WarMenu.End()
         end
         
-        
-        -- elseif WarMenu.Begin("dotMenuModKits") then
-        --     SetVehicleModKit(vehicle, 0)
-        --     local valid = false
-        --     for i = 0, 10 do
-        --         local slotName = GetModSlotName(vehicle, i)
-        --         if slotName ~= nil then
-        --             local _, currentIndex = WarMenu.ComboBox(slotName, GetModsFromVehicle(vehicle, i), state.currentIndex)
-        --             state.currentIndex = currentIndex
-
-        --             -- Items:AddList(slotName, GetModsFromVehicle(vehicle, i), GetVehicleMod(vehicle, i) + 2, "Modify "..slotName, nil, false, function(index, _, onListChange)
-        --             --     if onListChange then
-        --             --         SetVehicleMod(vehicle, i, index - 2, false)
-        --             --     end
-        --             -- end)
-        --             valid = true
-        --         end
-        --     end
-
-        --     if not valid then
-        --         WarMenu.Button("No vehicle mods located", "Unable to locate vehicle modifications")
-        --     end
-		-- 	-- local numModKits = GetNumVehicleMods(vehicle)
-
-
-		-- 	-- for modKitIndex = 0, numModKits - 1 do
-		-- 	-- 	if WarMenu.MenuButton('Mod Kit ' .. modKitIndex, 'applyModKitMenu') then
-		-- 	-- 		-- Store the selected modKitIndex for later use
-		-- 	-- 		sharedState.selectedModKit = modKitIndex
-		-- 	-- 	end
-		-- 	-- end
-
-		-- 	-- if sharedState.selectedModKit then
-		-- 	-- 	local vehicle = GetVehiclePedIsIn(GetPlayerPed(-1), false)
-		-- 	-- 	SetVehicleModKit(vehicle, sharedState.selectedModKit)
-		-- 	-- 	sharedState.selectedModKit = nil -- Clear the selection
-		-- 	-- end
-
-        --     WarMenu.End()
-        -- end
+    
 
         Wait(0)
     end
